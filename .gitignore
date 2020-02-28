@@ -1,0 +1,26 @@
+# general
+*~
+*.pyc
+\#*\#
+.\#*
+*DS_Store
+out.txt
+espnet.egg-info/
+doc/_build
+slurm-*.out
+tmp*
+.eggs/
+.hypothesis/
+.idea
+.pytest_cache/
+__pycache__/
+check_autopep8
+.coverage
+htmlcov
+coverage.xml*
+bats-core/
+shellcheck*
+check_shellcheck*
+test_spm.vocab
+test_spm.model
+.vscode*
