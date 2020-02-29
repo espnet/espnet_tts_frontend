@@ -3,15 +3,17 @@ Text frontend for ESPnet tts recipes
 
 ## Install
 ```bash
-pip install git+https://github.com/espnet/espnet_tts_cleaners
+pip install git+https://github.com/espnet/espnet_tts_frontend
 ```
 
 ### Install with pyopenjtalk
 
 ```bash
-git clone https://github.com/espnet/espnet_tts_cleaners
+git clone https://github.com/espnet/espnet_tts_frontend
 git submodule update --init --recursive
-pip install --global-option=pyopenjtalk -e espnet_tts_cleaners
+python setupy pyopenjtalk
+# OR
+# pip install --global-option=pyopenjtalk -e espnet_tts_frontend
 ```
 
 ## Usage
