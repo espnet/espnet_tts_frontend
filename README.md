@@ -41,7 +41,8 @@ https://github.com/Kyubyong/g2p
 [nltk_data] Downloading package averaged_perceptron_tagger to
 ...
 >>> g2p = G2p()
->>> g2p("hello world")                                                                           ['HH', 'AH0', 'L', 'OW1', ' ', 'W', 'ER1', 'L', 'D']
+>>> g2p("hello world")
+['HH', 'AH0', 'L', 'OW1', ' ', 'W', 'ER1', 'L', 'D']
 ```
 
 ### Japanese
