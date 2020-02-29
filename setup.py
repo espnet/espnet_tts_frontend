@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 import os
+
 from setuptools import find_packages
 from setuptools import setup
 
+dirname = os.path.dirname(__file__)
+if dirname == "":
+    dirname = "."
+
 
 requirements = {
-    "install": ["unidecode", "inflect"],
+    "install": ["unidecode", "inflect", "underthesea"],
     "setup": [],
     "test": [],
     "doc": []
@@ -17,13 +22,11 @@ extras_require = {
     k: v for k, v in requirements.items() if k not in ["install", "setup"]
 }
 
-dirname = os.path.dirname(__file__)
 setup(
     name="tacotron_cleaner",
     version="0.0.0",
-    url="http://github.com/espnet/tacotron_cleaner",
-    description="derived from https://github.com/keithito/tacotron",
-    packages=find_packages(include=["tacotron_cleaner*"]),
+    url="http://github.com/espnet/espnet_tts_cleaner",
+    packages=find_packages(include=["tacotron_cleaner*", "vietnamese_cleaner*"]),
     install_requires=install_requires,
     setup_requires=setup_requires,
     tests_require=tests_require,
