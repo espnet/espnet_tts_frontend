@@ -37,7 +37,7 @@ Derived from https://github.com/keithito/tacotron
 https://github.com/Kyubyong/g2p
 
 ```python
->>> from g2p_en import G2p  # Automatically run downloading for the first time, 
+>>> from g2p_en import G2p  # Automatically run downloading for the first time
 [nltk_data] Downloading package averaged_perceptron_tagger to
 ...
 >>> g2p = G2p()
@@ -55,8 +55,10 @@ https://github.com/ikegami-yukino/jaconv/
 ```
 
 #### pyopenjtalk
+https://github.com/r9y9/pyopenjtalk
 
 ```python
+# Automatically run downloading for the first time
 >>> pyopenjtalk.g2p("あらゆる 現実を すべて 自分の ほうへ ねじ曲げたのだ。", kana=True)
 'アラユル\u3000ゲンジツヲ\u3000スベテ\u3000ジブンノ\u3000ホーエ\u3000ネジマゲタノダ。'
 >>> pyopenjtalk.g2p("あらゆる 現実を すべて 自分の ほうへ ねじ曲げたのだ。", kana=False)
