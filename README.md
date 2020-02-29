@@ -1,12 +1,28 @@
-# ESPnet TTS Cleaners
-Collection of text cleaners for ESPnet tts recipes
+# ESPnet TTS Frontend
+Text frontend for ESPnet tts recipes
 
 ## Install
-```
-pip install git+https://github.com/espnet/espnet_tts_cleaners
+```bash
+git clone https://github.com/espnet/espnet_tts_frontend
+pip install -e espnet_tts_frontend
+# OR
+# pit install git+https://github.com/espnet/espnet_tts_frontend
 ```
 
-## tacotron_cleaner
+### Install with pyopenjtalk
+
+```bash
+git clone https://github.com/espnet/espnet_tts_frontend
+cd espnet_tts_frontend/
+git submodule update --init --recursive
+python setup.py pyopenjtalk
+# OR
+# pip install --global-option=pyopenjtalk git+https://github.com/espnet/espnet_tts_frontend
+```
+
+## Usage
+
+### tacotron_cleaner
 Derived from https://github.com/keithito/tacotron
 
 ```python
@@ -15,7 +31,7 @@ Derived from https://github.com/keithito/tacotron
 'HELLO WORLD, AND JUNIOR AND DOCTOR'
 ```
 
-## vietnamese_cleaner
+### vietnamese_cleaner
 
 ```python
 >>> import vietnamese_cleaner.vietnamese_cleaner
