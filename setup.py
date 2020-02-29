@@ -1,12 +1,49 @@
 #!/usr/bin/env python
 import os
+import subprocess
 
 from setuptools import find_packages
 from setuptools import setup
+from setuptools.command.install import install
 
 dirname = os.path.dirname(__file__)
 if dirname == "":
     dirname = "."
+
+
+def install_hts_engine_API():
+    subprocess.check_call(
+        "cd " + dirname + "/hts_engine_API/src && "
+        "./waf configure --prefix=../../build && ./waf build install",
+        shell=True,
+    )
+
+
+def install_open_jtalk():
+    subprocess.check_call(
+        "mkdir -p " + dirname + "/open_jtalk/src/build &&"
+        "cd open_jtalk/src/build && "
+        "cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON "
+        "-DCMAKE_INSTALL_PREFIX=../../../build  .. && "
+        "make install",
+        shell=True,
+    )
+
+
+def install_pyopenjtalk():
+    subprocess.check_call(
+        "OPEN_JTALK_INSTALL_PREFIX=" + dirname +
+        "/build pip install -e pyopenjtalk",
+        shell=True,
+    )
+
+
+class pyopenjtalk_install(install):
+    def run(self):
+        install_hts_engine_API()
+        install_open_jtalk()
+        install_pyopenjtalk()
+        super(pyopenjtalk_install, self).run()
 
 
 requirements = {
@@ -23,7 +60,7 @@ extras_require = {
 }
 
 setup(
-    name="espnet_tts_cleaner",
+    name="tacotron_cleaner",
     version="0.0.0",
     url="http://github.com/espnet/espnet_tts_cleaner",
     packages=find_packages(include=["tacotron_cleaner*", "vietnamese_cleaner*"]),
@@ -31,6 +68,7 @@ setup(
     setup_requires=setup_requires,
     tests_require=tests_require,
     extras_require=extras_require,
+    cmdclass={"pyopenjtalk": pyopenjtalk_install},
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
