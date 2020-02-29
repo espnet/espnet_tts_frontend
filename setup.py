@@ -9,6 +9,7 @@ from setuptools.command.install import install
 dirname = os.path.dirname(__file__)
 if dirname == "":
     dirname = "."
+dirname = os.path.abspath(dirname)
 
 
 def install_hts_engine_API():
