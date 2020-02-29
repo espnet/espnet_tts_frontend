@@ -11,8 +11,7 @@ pip install git+https://github.com/espnet/espnet_tts_cleaners
 ```bash
 git clone https://github.com/espnet/espnet_tts_cleaners
 git submodule update --init --recursive
-pip install git+https://github.com/espnet/espnet_tts_cleaners
-pip install --global-option=pyopenjtalk espnet_tts_cleaners
+pip install --global-option=pyopenjtalk -e espnet_tts_cleaners
 ```
 
 ## Usage
