@@ -6,3 +6,7 @@
 	path = hts_engine_API
 	url = https://github.com/r9y9/hts_engine_API.git
 	branch = master
+[submodule "open_jtalk"]
+	path = open_jtalk
+	url = https://github.com/r9y9/open_jtalk
+	branch = 1.10
