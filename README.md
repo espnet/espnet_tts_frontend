@@ -11,6 +11,8 @@ pip install -e espnet_tts_frontend
 
 ### Install with pyopenjtalk
 
+- Requires cmake and cython
+
 ```bash
 git clone https://github.com/espnet/espnet_tts_frontend
 cd espnet_tts_frontend/
