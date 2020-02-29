@@ -23,7 +23,7 @@ extras_require = {
 }
 
 setup(
-    name="tacotron_cleaner",
+    name="espnet_tts_cleaner",
     version="0.0.0",
     url="http://github.com/espnet/espnet_tts_cleaner",
     packages=find_packages(include=["tacotron_cleaner*", "vietnamese_cleaner*"]),
