@@ -1,6 +1,11 @@
 # ESPnet TTS Cleaners
 Collection of text cleaners for ESPnet tts recipes
 
+## Install
+```
+pip install git+https://github.com/espnet/espnet_tts_cleaners
+```
+
 ## tacotron_cleaner
 Derived from https://github.com/keithito/tacotron
 
