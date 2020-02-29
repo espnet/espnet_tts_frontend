@@ -1,5 +1,5 @@
-# ESPnet TTS Cleaners
-Collection of text cleaners for ESPnet tts recipes
+# ESPnet TTS Frontend
+Text frontend for ESPnet tts recipes
 
 ## Install
 ```bash
