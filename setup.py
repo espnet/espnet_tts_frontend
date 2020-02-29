@@ -48,7 +48,13 @@ class pyopenjtalk_install(install):
 
 
 requirements = {
-    "install": ["unidecode", "inflect", "underthesea"],
+    "install": [
+        "unidecode",
+        "inflect",
+        "underthesea",
+        "jaconv",
+        "g2p_en",
+    ],
     "setup": [],
     "test": [],
     "doc": []
