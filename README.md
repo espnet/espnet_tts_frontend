@@ -16,7 +16,7 @@ git clone https://github.com/espnet/espnet_tts_frontend
 git submodule update --init --recursive
 python setup.py pyopenjtalk
 # OR
-# pip install --global-option=pyopenjtalk -e espnet_tts_frontend
+# pip install --global-option=pyopenjtalk git+https://github.com/espnet/espnet_tts_frontend
 ```
 
 ## Usage
