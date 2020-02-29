@@ -2,10 +2,6 @@
 	path = pyopenjtalk
 	url = https://github.com/r9y9/pyopenjtalk
 	branch = master
-[submodule "open_jtalk"]
-	path = open_jtalk
-	url = https://github.com/r9y9/open_jtalk
-	branch = master
 [submodule "hts_engine_API"]
 	path = hts_engine_API
 	url = https://github.com/r9y9/hts_engine_API.git
