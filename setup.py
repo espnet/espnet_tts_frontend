@@ -23,7 +23,7 @@ def install_hts_engine_API():
 def install_open_jtalk():
     subprocess.check_call(
         "mkdir -p " + dirname + "/open_jtalk/src/build &&"
-        "cd open_jtalk/src/build && "
+        "cd " + dirname + "/open_jtalk/src/build && "
         "cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON "
         "-DCMAKE_INSTALL_PREFIX=../../../build  .. && "
         "make install",
@@ -34,7 +34,7 @@ def install_open_jtalk():
 def install_pyopenjtalk():
     subprocess.check_call(
         "OPEN_JTALK_INSTALL_PREFIX=" + dirname +
-        "/build pip install -e pyopenjtalk",
+        "/build pip install -e " + dirname + "/pyopenjtalk",
         shell=True,
     )
 
