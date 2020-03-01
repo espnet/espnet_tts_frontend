@@ -1,0 +1,26 @@
+  
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  linter_and_test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      max-parallel: 20
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04]
+        python-version: [3.6, 3.7]
+        use-conda: [true, false]
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: 'x64'
+      - name: install
+        run: |
+          pip install -e espnet_tts_frontend/
+      - name: install with pyopenjtalk
+        run: |
+          pip install --global-option=pyopenjtalk -e espnet_tts_frontend/
