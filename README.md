@@ -1,5 +1,7 @@
 # ESPnet TTS Frontend
-Text frontend for ESPnet tts recipes
+![CI](https://github.com/espnet/espnet_tts_frontend/workflows/CI/badge.svg)
+
+Text frontend for [ESPnet](https://github.com/espnet/espnet) tts recipes. 
 
 ## Install
 ```bash
