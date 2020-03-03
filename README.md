@@ -1,3 +1,5 @@
+**WARNING! This repository is temporal yet!!! We might remove this repositoy without notifacation.**
+
 # ESPnet TTS Frontend
 ![CI](https://github.com/espnet/espnet_tts_frontend/workflows/CI/badge.svg)
 
