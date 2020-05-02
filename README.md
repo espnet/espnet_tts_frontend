@@ -1,16 +1,11 @@
-**WARNING! This repository is temporal yet!!! We might remove this repositoy without notifacation.**
-
 # ESPnet TTS Frontend
 ![CI](https://github.com/espnet/espnet_tts_frontend/workflows/CI/badge.svg)
 
-Text frontend for [ESPnet](https://github.com/espnet/espnet) tts recipes. 
+A tools collection of text frontend for [ESPnet](https://github.com/espnet/espnet) tts recipes. 
 
 ## Install
 ```bash
-git clone https://github.com/espnet/espnet_tts_frontend
-pip install -e espnet_tts_frontend
-# OR
-# pit install git+https://github.com/espnet/espnet_tts_frontend
+pip install espnet_tts_frontend
 ```
 
 ### Install with pyopenjtalk
