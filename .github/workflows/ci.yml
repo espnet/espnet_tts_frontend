@@ -9,7 +9,7 @@ jobs:
       max-parallel: 20
       matrix:
         os: [ubuntu-16.04, ubuntu-latest]
-        python-version: [3.6, 3.7]
+        python-version: [3.6, 3.7, 3.8]
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v1
