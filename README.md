@@ -1,4 +1,7 @@
 # ESPnet TTS Frontend
+[![PyPI version](https://badge.fury.io/py/espnet-tts-frontend.svg)](https://badge.fury.io/py/espnet-tts-frontend)
+[![Python Versions](https://img.shields.io/pypi/pyversions/espnet-tts-frontend.svg)](https://pypi.org/project/espnet-tts-frontend/)
+[![Downloads](https://pepy.tech/badge/espnet-tts-frontend)](https://pepy.tech/project/espnet-tts-frontend)
 ![CI](https://github.com/espnet/espnet_tts_frontend/workflows/CI/badge.svg)
 
 A tools collection of text frontend for [ESPnet](https://github.com/espnet/espnet) tts recipes. 
