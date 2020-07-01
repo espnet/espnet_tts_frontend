@@ -60,6 +60,7 @@ requirements = {
         "underthesea",
         "jaconv",
         "g2p_en",
+        "pypinyin",
     ],
     "setup": [],
     "test": [],
@@ -74,7 +75,7 @@ extras_require = {
 
 setup(
     name="espnet_tts_frontend",
-    version="0.0.1",
+    version="0.0.2",
     long_description=open(os.path.join(dirname, 'README.md'),
                           encoding='utf-8').read(),
     long_description_content_type="text/markdown",
