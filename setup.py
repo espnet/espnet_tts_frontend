@@ -57,7 +57,9 @@ requirements = {
     "install": [
         "unidecode>=1.0.22",
         "inflect>=1.0.0",
-        "underthesea",
+        # FIXME(kamo): undertheseq requires too tight resriction to the dependencies,
+        #   joblib, scikit-learn, ntltk
+        # "underthesea",
         "jaconv",
         "g2p_en",
         "pypinyin",
