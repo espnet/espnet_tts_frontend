@@ -77,7 +77,7 @@ extras_require = {
 
 setup(
     name="espnet_tts_frontend",
-    version="0.0.2",
+    version="0.0.3",
     long_description=open(os.path.join(dirname, 'README.md'),
                           encoding='utf-8').read(),
     long_description_content_type="text/markdown",
