@@ -61,7 +61,14 @@ requirements = {
         #   joblib, scikit-learn, ntltk
         # "underthesea",
         "jaconv",
-        "g2p_en",
+        # espnet-g2p-en, not g2p_en. Both provide the import package g2p_en,
+        # so asking for the upstream name means pip installs it alongside
+        # espnet-g2p-en and whichever lands last overwrites the other's files.
+        # Upstream 2.1.0 (December 2019) asks NLTK for the tagger resource
+        # averaged_perceptron_tagger, renamed to averaged_perceptron_tagger_eng
+        # in NLTK 3.8.2, so when it wins, importing g2p_en fails on any current
+        # NLTK. espnet-g2p-en is the fork that fetches the current name.
+        "espnet-g2p-en",
         "pypinyin",
     ],
     "setup": [],
@@ -77,7 +84,7 @@ extras_require = {
 
 setup(
     name="espnet_tts_frontend",
-    version="0.0.3",
+    version="0.0.4",
     long_description=open(os.path.join(dirname, 'README.md'),
                           encoding='utf-8').read(),
     long_description_content_type="text/markdown",

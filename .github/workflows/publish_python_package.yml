@@ -1,0 +1,41 @@
+# Uploads espnet-tts-frontend to PyPI when a v* tag is pushed, using PyPI's
+# trusted publishing rather than a stored credential.
+# https://docs.pypi.org/trusted-publishers/
+
+name: publish python package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+# id-token: write is what trusted publishing needs. It only lets the job ask
+# GitHub for a short-lived OIDC identity token; it grants nothing over this
+# repository. PyPI checks that token against a publisher registered for this
+# repository and this workflow filename, so renaming this file breaks publishing
+# until the publisher on PyPI is updated to match.
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish_python_package_to_pypi:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      with:
+        persist-credentials: false
+    - name: Set up Python
+      uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+    - name: Build
+      run: python -m build
+    # No username or password here: passing either takes this out of the trusted
+    # publishing flow and back to a stored credential.
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
