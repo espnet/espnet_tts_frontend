@@ -7,8 +7,7 @@ Just add a boundary for word at r"[A-ZĐ]+\s"
 
 import re
 import sys
-
-from underthesea.feature_engineering.text import Text
+import unicodedata
 
 specials = [r"==>", r"->", r"\.\.\.", r">>", r"=\)\)"]
 digit = r"\d+([\.,_]\d+)+"
@@ -85,6 +84,18 @@ patterns = "(" + "|".join(patterns) + ")"
 if sys.version_info < (3, 0):
     patterns = patterns.decode('utf-8')
 patterns = re.compile(patterns, re.VERBOSE | re.UNICODE)
+
+
+def Text(text):
+    """ provide a wrapper for python string
+    map byte to str (python 3)
+    all string in utf-8 encoding
+    normalize string to NFC
+    """
+    if not type(text) == str:
+        text = text.decode("utf-8")
+    text = unicodedata.normalize("NFC", text)
+    return text
 
 
 def tokenize(text, format=None):
